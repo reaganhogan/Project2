@@ -1,0 +1,31 @@
+﻿.buttons {
+    background-color: lightblue;
+    border-radius: 10px;
+}
+
+h2, h3, h4, h5 {
+    color: #576070 !important;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.font-grey {
+    color: #576070;
+}
+
+.col-md-4 {
+    text-align:center
+}
+
+.MissionName {
+    font-family: 'Times New Roman', Times, serif !important;
+    text-align: center;
+    text-shadow: -4px 0 black, 0 1px black, 2px 0 black, 0 -1px black;
+    color: #ffffff;
+}
+
+.jumbotron {
+    background-image: url('https://static1.squarespace.com/static/54efb588e4b0387b1c1b9a9c/t/55990ca8e4b00d130d5a9fa3/1436093885682/map-of-the-world-map-abstract-painting-michael-tompsett1.jpg?format=1500w');
+    background-size: auto 100%;
+    color: #ffffff;
+}
+

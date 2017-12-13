@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+<link href="~/Content/MyStyles.css" rel="stylesheet" />
+<h2>@ViewBag.Title</h2>
+<h3>Please fill our your information below</h3>
+<!-->Below is the form<-->
+
+@* Layout for the form. The layout is created in a form format so that users can input things *@
+<!-->I want to see if this works<-->
+
+
+<form class="form-horizontal">
+    <div align="right">
+        <p><i>* MANDATORY FIELD</i></p>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="name">Name *</label>
+        <div class="col-sm-10">
+            <input class="form-control" id="name" placeholder="Enter name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Email *</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="sel1">Select list *</label>
+        <div class="col-sm-8">
+            <select class="form-control" id="sel1">
+                <option value="" selected disabled>Select subject</option>
+                <option>General Inquery</option>
+                <option>Report Error with Site</option>
+                <option>Difficulty Making Contact with Missionary</option>
+                <option>Request Job Openings</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="msg">Message *</label>
+        <div class="col-sm-8">
+            <textarea class="form-control" id="msg" placeholder="Enter message" rows="5"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="reset" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
+<h3>Our Headquarters</h3>
+<address style="font-family:''">
+    <br />
+    Missionary Hub HQ<br />
+    12687 Hawkstone Drive<br />
+    Windermere, FL 34786-6608<br />
+    <br />
+    Phone: 800.656.6690<br />
+</address>
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@missionaryhub.com">Support@missionaryhub.com</a><br />
+    <strong>Jobs:</strong> <a href="mailto:Marketing@missionaryhub.com">Jobs@missionaryhub.com</a>
+</address>

@@ -1,0 +1,102 @@
+﻿<link href="~/Content/MissionStyle.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "MissionInfo";
+}
+<link href="~/Content/MissionStyle.css" rel="stylesheet" />
+@* populates with mission information*@
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Missions", "Index", "Missions")</li>
+    <li>@ViewBag.MissionName</li>
+
+</ul>
+
+<div class="jumbotron">
+    <h1 class="MissionName"><b>@ViewBag.MissionName</b>
+    </h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3><b>President's Name</b></h3>
+        <h4>@ViewBag.PresidentName</h4>
+    </div>
+    <div class="col-md-4">
+        <h3><b>Mission Address</b></h3>
+        <h4>@ViewBag.Address</h4>
+    </div>
+    <div class="col-md-4">
+        <h3><b>Language</b></h3>
+        <h4>@ViewBag.Language</h4>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3><b>Climate</b></h3>
+        <h4>@ViewBag.Climate</h4>
+    </div>
+    <div class="col-md-4">
+        <h3><b>Dominant Religion</b></h3>
+        <h4>@ViewBag.Religion</h4>
+    </div>
+    <div class="col-md-4">
+        <h3><b>"A missionary is not called to a place; rather, he or she is called to serve." ~David A. Bednar</b></h3>
+    </div>
+</div>
+
+<div><img src="~/Content/Images/@(ViewBag.Picture).png" style="width:100%;" class="img-circle"></div>
+
+<div class="row">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+    <br />
+    <br />
+    <p><b>Q:</b> What is one thing you wish you brought on the mission with you that you forgot? </p>
+    <p><b>A:</b> I wish I brought a family photo</p>
+    @using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+    {
+        <label for="inputReply" class="sr-only">Type your answer here</label>
+        @Html.TextBox("New Reply")
+        <button type="reset" class="btn">Reply</button>
+    }
+    <br />
+    <br />
+    <p><b>Q:</b> Are backpacks allowed in the mission? </p>
+    <p><b>A:</b> No, you need a satchel</p>
+    @using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+    {
+        <label for="inputReply" class="sr-only">Type your answer here</label>
+        @Html.TextBox("New Reply")
+        <button type="reset" class="btn">Reply</button>
+    }
+    <br />
+    <br />
+    <p><b>Q:</b> What is a good brand of shoes to buy? </p>
+    <p><b>A:</b> Ecco is a good brand</p>
+    @using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+    {
+        <label for="inputReply" class="sr-only">Type your answer here</label>
+        @Html.TextBox("New Reply")
+        <button type="reset" class="btn">Reply</button>
+    }
+    <br />
+    <br />
+    <p><b>Q:</b> Is going on a mission hard?  </p>
+    <p><b>A:</b> Yes, but it is worth it!!</p>
+    @using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+    {
+        <label for="inputReply" class="sr-only">Type your answer here</label>
+        @Html.TextBox("New Reply")
+        <button type="reset" class="btn">Reply</button>
+    }
+    <br />
+    <br />
+    <h2>Enter a new question</h2>
+    @using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+    {
+        <label for="inputReply" class="sr-only">Type your answer here</label>
+        @Html.TextBox("New Reply")
+        <button type="reset" class="btn">Submit</button>
+    }
+</div>

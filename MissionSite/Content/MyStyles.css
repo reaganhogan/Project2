@@ -1,0 +1,31 @@
+﻿body {
+}
+
+.classy {
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.full-screen {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.jumbotron-color {
+    background-color: white !important;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+.buttons {
+    background-color: lightblue;
+    border-radius: 10px;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #576070 !important;
+}
+
+.font-grey {
+    color: #576070;
+}
