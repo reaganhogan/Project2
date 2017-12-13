@@ -1,7 +1,7 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(MissionSite.Startup))]
+[assembly: OwinStartupAttribute(typeof(Authentication2.Startup))]
 namespace Authentication2
 {
     public partial class Startup

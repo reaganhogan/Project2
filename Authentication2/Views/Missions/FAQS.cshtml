@@ -1,0 +1,60 @@
+﻿<link href="~/Content/MissionStyle.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "FAQ";
+}
+<!--The FAQ are generated and recieved from the database.-->
+<div class="row">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+    <br />
+    <br />
+    <p><b>Q:</b></p>
+    <p><b>A:</b> I wish I brought a family photo</p>
+    <!--form where users can input answers to respond to the questions. Currently when they submit it resets and clears the text box-->
+    @using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+    {
+        <label for="inputReply" class="sr-only">Type your answer here</label>
+        @Html.TextBox("New Reply")
+        <button type="reset" class="btn">Reply</button>
+    }
+    <br />
+    <br />
+    <p><b>Q:</b> Are backpacks allowed in the mission? </p>
+    <p><b>A:</b> No, you need a satchel</p>
+    <!--form where users can input answers to respond to the questions. Currently when they submit it resets and clears the text box-->
+    @using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+    {
+        <label for="inputReply" class="sr-only">Type your answer here</label>
+        @Html.TextBox("New Reply")
+        <button type="reset" class="btn">Reply</button>
+    }
+    <br />
+    <br />
+    <p><b>Q:</b> What is a good brand of shoes to buy? </p>
+    <p><b>A:</b> Ecco is a good brand</p>
+    @using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+    {
+        <label for="inputReply" class="sr-only">Type your answer here</label>
+        @Html.TextBox("New Reply")
+        <button type="reset" class="btn">Reply</button>
+    }
+    <br />
+    <br />
+    <p><b>Q:</b> Is going on a mission hard?  </p>
+    <p><b>A:</b> Yes, but it is worth it!!</p>
+    @using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+    {
+        <label for="inputReply" class="sr-only">Type your answer here</label>
+        @Html.TextBox("New Reply")
+        <button type="reset" class="btn">Reply</button>
+    }
+    <br />
+    <br />
+    <h2>Enter a new question</h2>
+    @using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+    {
+        <label for="inputReply" class="sr-only">Type your answer here</label>
+        @Html.TextBox("New Reply")
+        <button type="reset" class="btn">Submit</button>
+    }
+</div>

@@ -16,10 +16,19 @@ namespace Authentication2.Controllers
         private MissionSiteContext db = new MissionSiteContext();
 
         // GET: Missions1
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    return View(db.Missions.ToList());
+        //}
+        //GET: Missions
+        //passes parameters to the MissionInfo view when it gets directed towards
+        public ActionResult Index(int MissionID)
         {
-            return View(db.Missions.ToList());
+            Missions item = db.Missions.Find(MissionID);
+            return View();
+
         }
+        
 
         // GET: Missions1/Details/5
         public ActionResult Details(int? id)

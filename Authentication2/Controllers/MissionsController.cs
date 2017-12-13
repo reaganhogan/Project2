@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
-namespace Authentication2.Controllers
+namespace MissionSite.Controllers
 {
     public class MissionsController : Controller
     {
@@ -13,23 +12,54 @@ namespace Authentication2.Controllers
         {
             return View();
         }
+       // GET: Missions
+       //passes parameters to the MissionInfo view when it gets directed towards
+       // public ActionResult MissionInfo(int MissionID)
+       // {
+       //     if (MissionID = "1")
+       //     {
+       //         ViewBag.MissionName = db.Database.SqlQuery<Missions>("SELECT MissionName"
+       //                                                             + "FROM Missions"
+       //                                                             + "WHERE MissionID = '1'");
+       //         ViewBag.PresidentName = PresidentName;
+       //         ViewBag.Address = Address;
+       //         ViewBag.Climate = Climate;
+       //         ViewBag.Religion = Religion;
+       //         ViewBag.Picture = Picture;
+       //         ViewBag.Language = Language;
+       //         return View();
 
-        // GET: Missions
-        //passes parameters to the MissionInfo view when it gets directed towards
-        public ActionResult MissionInfo(string Language, String MissionName, string PresidentName, string Address, string Climate, string Religion, string Picture)
+       //     }
+       //     else if (MissionID = "2")
+       //     {
+       //         ViewBag.MissionName = MissionName;
+       //         ViewBag.PresidentName = PresidentName;
+       //         ViewBag.Address = Address;
+       //         ViewBag.Climate = Climate;
+       //         ViewBag.Religion = Religion;
+       //         ViewBag.Picture = Picture;
+       //         ViewBag.Language = Language;
+       //         return View();
+       //     }
+       //     else (MissionID = "3")
+       //     {
+       //         ViewBag.MissionName = MissionName;
+       //         ViewBag.PresidentName = PresidentName;
+       //         ViewBag.Address = Address;
+       //         ViewBag.Climate = Climate;
+       //         ViewBag.Religion = Religion;
+       //         ViewBag.Picture = Picture;
+       //         ViewBag.Language = Language;
+       //         return View();
+       //     }
+       // }
+        //need to authroize and sign in to view this page
+        [Authorize]
+        public ActionResult FAQ()
         {
-            //Defines mission info in viewbag
-            ViewBag.MissionName = MissionName;
-            ViewBag.PresidentName = PresidentName;
-            ViewBag.Address = Address;
-            ViewBag.Climate = Climate;
-            ViewBag.Religion = Religion;
-            ViewBag.Picture = Picture;
-            ViewBag.Language = Language;
             return View();
         }
-        //this is me practicing comments
-        //This form will need more work once we submit info from the form, right now it is a reset form
+        //action method that clears the text box in the forms on the MissionInfo view
         [HttpPost]
         public ActionResult FAQAnswers(FormCollection form)
         {

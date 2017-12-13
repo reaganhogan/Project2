@@ -2,19 +2,19 @@
 @{
     ViewBag.Title = "Index";
 }
+<!--links this page to the style sheet to create a better looking view-->
 <link href="~/Content/MyStyles.css" rel="stylesheet" />
-
 <h2>Select a Mission</h2>
-
+<!--Drop down menu which displays the different missions you can select from-->
 <div class="dropdown">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
         Select a Mission
         <span class="caret"></span>
     </button>
-    @* A dropdown list with all the mission information to be passed *@
+    <!--When the user selects a mission from the drop down menu the parameters with the associated mission are passed to the next view-->
     <ul class="dropdown-menu">
-        <li>@Html.ActionLink("Brazil Recife Mission", "MissionInfo", "Missions", new { MissionName = "Brazil Recife Mission", PresidentName = "Rory C. Bigelow", Address = "Rua Das Ninfas #30, Boa Vista -- Recife -- PE Cep 50070-050", Language = "Portuguese", Climate = "Tropical", Religion = "Catholic", Picture = "Brazil" }, null)</li>
-        <li>@Html.ActionLink("L'viv, Ukraine Mission", "MissionInfo", "Missions", new { MissionName = "L'viv Ukraine Mission", PresidentName = "Daniel E. Lattin", Address = "Akademika Sakharova 42, L'viv, Ukraine", Language = "Ukrainian", Climate = "Frigid Winters, Hot Summers", Religion = "Russian Orthodox", Picture= "Ukraine" }, null)</li>
-        <li>@Html.ActionLink("Pennsylvania Pittsburgh Mission", "MissionInfo", "Missions", new { MissionName = "Pennsylvania Pittsbugh Mission", PresidentName = "Bradley K. Johnson", Address = "2600 Boyce Plaza Suite 101, Upper St. Clair, PA 15241", Language = "English", Climate = "Hot and Humid Summers, Frigid Winters", Religion = "Catholic", Picture="Pennsylvania" }, null)</li>
+        <li>@Html.ActionLink("Brazil Recife Mission", "Index", "Missions1", new { MissionID = "1" }, null)</li>
+        <li>@Html.ActionLink("L'viv, Ukraine Mission", "Index", "Missions1", new { MissionID = "2" }, null)</li>
+        <li>@Html.ActionLink("Pennsylvania Pittsburgh Mission", "Index", "Missions1", new { MissionID = "3" }, null)</li>
     </ul>
 </div>

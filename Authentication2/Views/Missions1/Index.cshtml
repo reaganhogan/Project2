@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Authentication2.Models.Missions>
+﻿@model Authentication2.Models.Missions
 
 @{
     ViewBag.Title = "Index";
@@ -6,7 +6,56 @@
 
 <h2>Index</h2>
 
-<p>
+<link href="~/Content/MissionStyle.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "MissionInfo";
+}
+<link href="~/Content/MissionStyle.css" rel="stylesheet" />
+<!--The breadcrumb shows you the path of views you took to get to the current location. You can choose to go back from this-->
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Missions", "Index", "Missions")</li>
+    <li>@Html.DisplayNameFor(model => model.MissionName)</li>
+</ul>
+<!--Displays the mission name-->
+<div class="jumbotron">
+    <h1 class="MissionName">
+        <b>@ViewBag.MissionName</b>
+    </h1>
+</div>
+<!--Displays the mission information, and pulls the information from parameters passed-->
+<div class="row">
+    <div class="col-md-4">
+        <h3><b>President's Name</b></h3>
+        <h4>@ViewBag.PresidentName</h4>
+    </div>
+    <div class="col-md-4">
+        <h3><b>Mission Address</b></h3>
+        <h4>@ViewBag.Address</h4>
+    </div>
+    <div class="col-md-4">
+        <h3><b>Language</b></h3>
+        <h4>@ViewBag.Language</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h3><b>Climate</b></h3>
+        <h4>@ViewBag.Climate</h4>
+    </div>
+    <div class="col-md-4">
+        <h3><b>Dominant Religion</b></h3>
+        <h4>@ViewBag.Religion</h4>
+    </div>
+    <div class="col-md-4">
+        <h3><b>"A missionary is not called to a place; rather, he or she is called to serve." ~David A. Bednar</b></h3>
+    </div>
+</div>
+<!--Displays the mission flag in the shape of a circle-->
+<div><img src="~/Content/Images/@(ViewBag.Picture).png" style="width:100%;" class="img-circle"></div>
+
+
+@*<p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
@@ -66,4 +115,4 @@
     </tr>
 }
 
-</table>
+</table>*@
