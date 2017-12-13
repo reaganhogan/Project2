@@ -2,7 +2,7 @@
 using Owin;
 
 [assembly: OwinStartupAttribute(typeof(MissionSite.Startup))]
-namespace MissionSite
+namespace Authentication2
 {
     public partial class Startup
     {

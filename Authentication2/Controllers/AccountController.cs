@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using MissionSite.Models;
+using Authentication2.Models;
 
-namespace MissionSite.Controllers
+namespace Authentication2.Controllers
 {
     [Authorize]
     public class AccountController : Controller

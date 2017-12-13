@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissionSite", "Authentication2\MissionSite.csproj", "{CBDB953E-24B5-49BF-9C9F-1C6EEBBC1C8C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentication2", "Authentication2\Authentication2.csproj", "{CBDB953E-24B5-49BF-9C9F-1C6EEBBC1C8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace MissionSite.Models
+namespace Authentication2.Models
 {
     public class IndexViewModel
     {

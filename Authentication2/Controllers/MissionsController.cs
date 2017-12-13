@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MissionSite.Controllers
+namespace Authentication2.Controllers
 {
     public class MissionsController : Controller
     {

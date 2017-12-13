@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace MissionSite
+namespace Authentication2
 {
     public class BundleConfig
     {
