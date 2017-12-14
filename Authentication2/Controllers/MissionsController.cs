@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-namespace MissionSite.Controllers
+namespace Authentication2.Controllers
 {
     public class MissionsController : Controller
     {
@@ -55,7 +55,7 @@ namespace MissionSite.Controllers
        // }
         //need to authroize and sign in to view this page
         [Authorize]
-        public ActionResult FAQ()
+        public ActionResult FAQS()
         {
             return View();
         }
