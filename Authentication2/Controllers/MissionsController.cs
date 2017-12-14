@@ -1,16 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Authentication2.DAL;
+using Authentication2.Models;
 namespace Authentication2.Controllers
 {
+    
     public class MissionsController : Controller
     {
+        private MissionSiteContext db = new MissionSiteContext();
         // GET: Missions
         public ActionResult Index()
         {
-            return View();
+            ViewBag.missions = db.Missions.ToList();
+            return View(ViewBag.missions);
         }
        // GET: Missions
        //passes parameters to the MissionInfo view when it gets directed towards

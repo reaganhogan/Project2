@@ -22,10 +22,10 @@ namespace Authentication2.Controllers
         //}
         //GET: Missions
         //passes parameters to the MissionInfo view when it gets directed towards
-        public ActionResult Index(int MissionID)
+        public ActionResult Index(int id)
         {
-            Missions item = db.Missions.Find(MissionID);
-            return View();
+            Missions item = db.Missions.Find(id);
+            return View(item);
 
         }
         
