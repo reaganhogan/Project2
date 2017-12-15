@@ -15,6 +15,6 @@ namespace Authentication2.Models
         public string Question { get; set; }
         public string Answer { get; set; }
         public int MissionID { get; set; }
-        public int UserID { get; set; }
+        public int? UserID { get; set; }
     }
 }

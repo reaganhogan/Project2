@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Authentication2.Models.MissionQuestions>
+<link href="~/Content/MissionStyle.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "FAQ";
+}
+<!--The FAQ are generated and recieved from the database.-->
+<div class="row">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+    <br />
+    <br /> 
+    <div class="form-horizontal">
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <div class="col-xs-6">
+                    <p><b>Q:</b> @Html.DisplayFor(model => item.Question)</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-6">
+                    <p><b>A:</b> @Html.DisplayFor(model => item.Answer)</p>
+                </div>
+            </div>
+
+        <!--form where users can input answers to respond to the questions. Currently when they submit it resets and clears the text box-->
+            using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+            {
+                <label for="inputReply" class="sr-only">Type your answer here</label>
+                @Html.EditorFor("New Reply")
+                <button type="submit" class="btn">Reply</button>
+            }
+            <br />
+        }
+        </div>
+
+
+        <br />
+        <br />
+        <h2>Enter a new question</h2>
+        @using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+        {
+            <label for="inputReply" class="sr-only">Type your answer here</label>
+            @Html.TextBox("New Reply")
+            <button type="reset" class="btn">Submit</button>
+        }
+    </div>

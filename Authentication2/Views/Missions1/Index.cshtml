@@ -54,64 +54,75 @@
 <!--Displays the mission flag in the shape of a circle-->
 <div><img src="~/Content/Images/@(Model.Picture).png" style="width:100%;" class="img-circle"></div>
 
-@*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.MissionName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PresidentName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Language)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Climate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Religion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Picture)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.MissionName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PresidentName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Language)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Climate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Religion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Picture)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MissionID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MissionID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MissionID })
-        </td>
-    </tr>
-}
+<div class="row">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+    <br />
+    <br />
+    <div class="form-horizontal">
+        @foreach (var item in ViewBag.questions)
+        {
+            <div class="row">
+                <div class="col-xs-6">
+                    <p><b>Q:</b> @item.Question</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-6">
+                    <p><b>A:</b> @item.Answer</p>
+                </div>
+            </div>
 
-</table>*@
+        <!--form where users can input answers to respond to the questions. Currently when they submit it resets and clears the text box-->
+            @*using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+            {
+                <label for="inputReply" class="sr-only">Type your answer here</label>
+                @Html.TextBox("New Reply")
+                <button type="submit" class="btn">Reply</button>
+            }*@
+            <br />
+        }
+    </div>
+
+
+    <br />
+    <br />
+
+
+    
+    <div class="form-horizontal">
+        <h4>Enter a new question</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-10">
+                <input name="question"
+            </div>
+        </div>
+
+        
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <h2>Enter a new question</h2>
+    @using (Html.BeginForm("FAQAnswers", "Missions", FormMethod.Post))
+    {
+        <label for="inputReply" class="sr-only">Type your answer here</label>
+            @Html.TextBox("New Reply")
+            <button type="reset" class="btn">Submit</button>
+    }
+</div>
+

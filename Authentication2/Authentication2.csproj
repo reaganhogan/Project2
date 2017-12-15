@@ -294,6 +294,7 @@
     <Content Include="Views\MissionQuestions\Edit.cshtml" />
     <Content Include="Views\MissionQuestions\Index.cshtml" />
     <Content Include="Views\Missions\FAQS.cshtml" />
+    <Content Include="Views\MissionQuestions\FAQ.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

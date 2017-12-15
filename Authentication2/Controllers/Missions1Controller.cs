@@ -24,6 +24,10 @@ namespace Authentication2.Controllers
         //passes parameters to the MissionInfo view when it gets directed towards
         public ActionResult Index(int id)
         {
+            IEnumerable<MissionQuestions> questions = db.Database.SqlQuery<MissionQuestions>(
+                @"SELECT * FROM MissionQuestions WHERE MissionID = " + id);
+            ViewBag.questions = questions;
+                
             Missions item = db.Missions.Find(id);
             return View(item);
 

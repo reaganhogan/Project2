@@ -124,5 +124,11 @@ namespace Authentication2.Controllers
             }
             base.Dispose(disposing);
         }
+
+        //[Authorize]
+        public ActionResult FAQ ()
+        {
+            return View(db.MissionQuestions.ToList());
+        }
     }
 }
